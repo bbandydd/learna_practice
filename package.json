@@ -4,7 +4,7 @@
   "scripts": {
     "lerna:install": "./node_modules/lerna/bin/lerna.js bootstrap",
     "lerna:test": "./node_modules/lerna/bin/lerna.js run test",
-    "lerna:publish": "./node_modules/.bin/lerna publish --registry http://localhost:4873 --conventional-commits --cd-version=$LERNA_LEVEL --yes",
+    "lerna:publish": "./node_modules/.bin/lerna publish --registry http://localhost:4873",
     "test": "npm run lerna:test",
     "publish-all": "npm run lerna:publish"
   },
