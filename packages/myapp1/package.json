@@ -1,7 +1,7 @@
 {
   "name": "myapp1",
   "description": "react webpack2 react-router example",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "main": "src/index.js",
   "scripts": {
     "clean": "rimraf dist/*",
@@ -17,7 +17,7 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "@medical-component/button": "^1.0.4",
+    "@medical-component/button": "^1.0.5",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
