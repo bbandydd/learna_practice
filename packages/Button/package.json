@@ -1,8 +1,9 @@
 {
   "name": "@medical-component/button",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "transpile": "babel src -d dist --ignore '**/*.spec.js,**/*.stories.js'"
   },

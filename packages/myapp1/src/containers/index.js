@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { hot } from 'react-hot-loader/root';
-import Button from '../../../Button';
+import Button from '@medical-component/button';
 
 const Main = () => {
   useEffect(() => {
