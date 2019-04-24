@@ -1,7 +1,7 @@
 {
   "name": "myapp1",
   "description": "react webpack2 react-router example",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "src/index.js",
   "scripts": {
     "clean": "rimraf dist/*",
