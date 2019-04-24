@@ -3,7 +3,7 @@ import React from 'react';
 const Button = ({ type = 'button', children, onClick }) => (
   <div>
     <button type={type} onClick={onClick}>
-      { children }
+      This is button
     </button>
   </div>
 );
