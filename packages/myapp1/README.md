@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Build Status](https://travis-ci.org/ReactMaker/simple_react_startkit.svg?branch=master)](https://travis-ci.org/ReactMaker/simple_react_startkit)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+[![david-dm](https://david-dm.org/reactmaker/simple_react_startkit.svg)](https://david-dm.org/)
+[![Known Vulnerabilities](https://snyk.io/test/github/ReactMaker/simple_react_startkit/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ReactMaker/simple_react_startkit?targetFile=package.json)
 
-## Available Scripts
+# Simple React Startkit
 
-In the project directory, you can run:
+This is a simple react boilerplate, without complex dependencies(eg. redux or router), this project can help you start the react project in seconds.
 
-### `npm start`
+這個環境包可以讓你快速體驗 ReactJS 開發環境的便利，我們並沒有在裏面放入額外的套件(例如 redux, router)，希望可以讓你用最簡單的環境開始學習 React
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 特色 feature
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* [react 16.8](https://github.com/facebook/react)
+* [webpack 4](https://github.com/webpack/webpack)
+* [babel 7](https://github.com/babel/babel)
+* [eslint](http://eslint.org)
 
-### `npm test`
+## 需求配置 requirement
+* node `^6.11.5`
+* npm `^3.10.10`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 開始 getting start
 
-### `npm run build`
+先確定好安裝了 node 6.11.5 以上的版本，接著就可以輸入以下指令
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+$ git clone https://github.com/ReactMaker/simple_react_start_kit_2017
+$ cd simple_react_start_kit_2017
+$ npm install                   # Install project dependencies
+$ npm start                     # Compile and launch
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+如果一切成功，就會看到以下畫面，並且瀏覽器會打開的範例頁面
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Imgur](https://i.imgur.com/MLcE6SO.png)
 
-### `npm run eject`
+開發當中最常用到的是 `npm start` 指令，我們還有一些其他的指令要介紹給你知道
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| `npm run <script>` | 說明                                                                         |
+|--------------------|------------------------------------------------------------------------------|
+| `start`            | 啟動網站在 8000 port                                                         |
+| `dist`             | 編譯整個網站成品到 dist 資料夾下                                             |
+| `lint`             | 檢查所有的 js 檔案有沒有符合 coding style                                    |
+| `lint:fix`         | 檢查所有的 js 檔案有沒有符合 coding style ，如果是一些簡單的錯誤就會嘗試修復 |
+| `deploy`           | 編譯整個網站成品後，上傳至Github靜態頁面，https://[Github 帳號].github.io/[Repositories Name]/#/ |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Docker
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+如果想要把專案 build 到 docker 上面跑，請執行這條命令
+```
+npm run build:docker
+```
+輸入完命令之後會建立 docker image 名稱為 `reactdocker`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![](https://i.imgur.com/LISz99c.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+我們可以透過以下指令把映像檔跑起來
 
-### Code Splitting
+```
+docker run --name reactmaker -d -P reactdocker
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+因為我是用`-P`參數自動分配port，所以跑起來之後輸入 `docker ps` 察看系統給我哪個 port
 
-### Analyzing the Bundle Size
+![](https://i.imgur.com/Fww1ncw.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+接著就可以在瀏覽器輸入localhost:32768看到我們包好的網頁了
