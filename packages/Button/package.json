@@ -4,6 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "transpile": "babel src -d dist --ignore '**/*.spec.js,**/*.stories.js'"
   },
