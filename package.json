@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "publish": "./node_modules/.bin/lerna publish --registry http://localhost:4873"
+    "transpile": "./node_modules/.bin/lerna run transpile",
+    "publish": "npm run transpile && ./node_modules/.bin/lerna publish --registry http://localhost:4873"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
