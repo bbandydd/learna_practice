@@ -1,0 +1,26 @@
+{
+  "name": "medical-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "transpile": "babel src -d dist --ignore '**/*.spec.js,**/*.stories.js'"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
+  }
+}
