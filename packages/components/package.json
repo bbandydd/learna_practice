@@ -8,7 +8,7 @@
     "dist/"
   ],
   "scripts": {
-    "transpile": "babel src -d dist --ignore '**/*.spec.js,**/*.stories.js'"
+    "transpile": "babel ../../packages -d dist --ignore '**/*.spec.js,**/*.stories.js'"
   },
   "babel": {
     "presets": [
@@ -22,5 +22,8 @@
         ]
       }
     }
+  },
+  "dependencies": {
+    "@medical-component/button": "^1.0.8"
   }
 }
